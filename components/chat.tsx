@@ -7,6 +7,7 @@ import { Textarea } from "./textarea";
 import { ProjectOverview } from "./project-overview";
 import { Messages } from "./messages";
 import { Header } from "./header";
+import { Footer } from "./footer";
 import { toast } from "sonner";
 
 export default function Chat() {
@@ -26,33 +27,36 @@ export default function Chat() {
   const isLoading = status === "streaming" || status === "submitted";
 
   return (
-    <div className="flex flex-col justify-center w-full h-dvh stretch">
+    <div className="flex flex-col min-h-dvh">
       <Header />
-      {messages.length === 0 ? (
-        <div className="mx-auto w-full max-w-xl">
-          <ProjectOverview />
-        </div>
-      ) : (
-        <Messages messages={messages} isLoading={isLoading} status={status} />
-      )}
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          sendMessage({ text: input }, { body: { selectedModel } });
-          setInput("");
-        }}
-        className="px-4 pb-8 mx-auto w-full max-w-xl bg-white dark:bg-black sm:px-0"
-      >
-        <Textarea
-          selectedModel={selectedModel}
-          setSelectedModel={setSelectedModel}
-          handleInputChange={(e) => setInput(e.currentTarget.value)}
-          input={input}
-          isLoading={isLoading}
-          status={status}
-          stop={stop}
-        />
-      </form>
+      <main className="flex-1 flex flex-col justify-center pt-20">
+        {messages.length === 0 ? (
+          <div className="mx-auto w-full max-w-xl py-8">
+            <ProjectOverview />
+          </div>
+        ) : (
+          <Messages messages={messages} isLoading={isLoading} status={status} />
+        )}
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            sendMessage({ text: input }, { body: { selectedModel } });
+            setInput("");
+          }}
+          className="px-4 pb-8 mx-auto w-full max-w-xl bg-white dark:bg-zinc-950 sm:px-0"
+        >
+          <Textarea
+            selectedModel={selectedModel}
+            setSelectedModel={setSelectedModel}
+            handleInputChange={(e) => setInput(e.currentTarget.value)}
+            input={input}
+            isLoading={isLoading}
+            status={status}
+            stop={stop}
+          />
+        </form>
+      </main>
+      {messages.length === 0 && <Footer />}
     </div>
   );
 }
