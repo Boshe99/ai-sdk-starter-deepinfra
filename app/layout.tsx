@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "D1337 AI Console",
+  title: "D1337 Agent - Security AI",
   description:
-    "Specialized AI agents for every task - LobeAgent, D1337-ZeroDay, D1337-Flash, D1337-Arsenal",
+    "Specialized AI trained for security operations - from beginner guidance to advanced zero-day hunting",
 };
 
 export default function RootLayout({

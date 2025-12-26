@@ -9,34 +9,34 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-red-600 via-purple-600 to-blue-600 rounded-lg flex items-center justify-center shadow-sm shadow-purple-500/20">
                 <span className="text-white font-bold text-sm">D</span>
               </div>
-              <span className="text-lg font-bold text-zinc-900 dark:text-white">D1337 AI</span>
+              <span className="text-lg font-bold text-zinc-900 dark:text-white">D1337 Agent</span>
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Specialized AI agents trained for specific operations - from general assistance to advanced security tasks.
+              Specialized AI trained for security operations - from beginner guidance to advanced zero-day hunting.
             </p>
           </div>
           
           <div className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">AI Agents</h3>
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">Capabilities</h3>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                <span>LobeAgent - General Purpose</span>
-              </li>
-              <li className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                <span>D1337-ZeroDay - Security Research</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                <span>D1337-Flash - Fast Response</span>
+                <span>Security Analysis</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                <span>D1337-Arsenal - Advanced Tools</span>
+                <span>Vulnerability Research</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                <span>Code Review</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <span>Threat Intelligence</span>
               </li>
             </ul>
           </div>
@@ -49,9 +49,19 @@ export const Footer = () => {
                   href="https://d1337.ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
                   Official Website
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://console.d1337.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                >
+                  D1337 Console
                 </Link>
               </li>
               <li>
@@ -59,7 +69,7 @@ export const Footer = () => {
                   href="https://d1337.ai/privacy" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -69,7 +79,7 @@ export const Footer = () => {
                   href="https://d1337.ai/terms" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
                   Terms of Service
                 </Link>
