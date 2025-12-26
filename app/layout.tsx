@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vercel x DeepInfra Chatbot",
+  title: "D1337 AI Console",
   description:
-    "This starter project uses DeepInfra with the AI SDK via the Vercel Marketplace",
+    "Specialized AI agents for every task - LobeAgent, D1337-ZeroDay, D1337-Flash, D1337-Arsenal",
 };
 
 export default function RootLayout({

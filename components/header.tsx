@@ -1,63 +1,49 @@
 import Link from "next/link";
-import { DeployButton } from "./deploy-button";
-import { deepInfraLogo as DeepInfraLogo } from "./icons";
 
 export const Header = () => {
   return (
-    <div className="fixed right-0 left-0 w-full top-0 bg-white dark:bg-zinc-950">
-      <div className="flex justify-between items-center p-4">
-        <div className="flex flex-row items-center gap-2 shrink-0 ">
-          <span className="jsx-e3e12cc6f9ad5a71 flex flex-row items-center gap-2 home-links">
-            <Link
-              className="text-zinc-800 dark:text-zinc-100 -translate-y-[.5px]"
-              rel="noopener"
-              target="_blank"
-              href="https://vercel.com/"
-            >
-              <svg
-                data-testid="geist-icon"
-                height={18}
-                strokeLinejoin="round"
-                viewBox="0 0 16 16"
-                width={18}
-                style={{ color: "currentcolor" }}
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8 1L16 15H0L8 1Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </Link>
-            <div className="jsx-e3e12cc6f9ad5a71 w-4 text-lg text-center text-zinc-300 dark:text-zinc-600">
-              <svg
-                data-testid="geist-icon"
-                height={16}
-                strokeLinejoin="round"
-                viewBox="0 0 16 16"
-                width={16}
-                style={{ color: "currentcolor" }}
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4.01526 15.3939L4.3107 14.7046L10.3107 0.704556L10.6061 0.0151978L11.9849 0.606077L11.6894 1.29544L5.68942 15.2954L5.39398 15.9848L4.01526 15.3939Z"
-                  fill="currentColor"
-                />
-              </svg>
+    <header className="fixed right-0 left-0 w-full top-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800 z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <div className="flex flex-row items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">D</span>
             </div>
-            <div className="jsx-e3e12cc6f9ad5a71 flex flex-row items-center gap-4">
-              <Link className="flex flex-row items-end gap-2" target="_blank" href="https://deepinfra.com">
-                <DeepInfraLogo size={42} />
-              </Link>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-zinc-900 dark:text-white">D1337 AI</span>
+              <span className="text-xs text-zinc-500 dark:text-zinc-400">Specialized AI Agents</span>
             </div>
-          </span>
+          </Link>
         </div>
-        <div className="flex flex-row items-center gap-2 shrink-0">
-          <DeployButton />
+        
+        <nav className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-4 text-sm">
+            <span className="px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
+              LobeAgent
+            </span>
+            <span className="px-3 py-1.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 font-medium">
+              D1337-ZeroDay
+            </span>
+            <span className="px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium">
+              D1337-Flash
+            </span>
+            <span className="px-3 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium">
+              D1337-Arsenal
+            </span>
+          </div>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <Link
+            href="https://d1337.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+          >
+            Learn More
+          </Link>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
