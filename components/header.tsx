@@ -6,41 +6,53 @@ export const Header = () => {
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         <div className="flex flex-row items-center gap-3">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-red-600 via-purple-600 to-blue-600 rounded-lg flex items-center justify-center shadow-md shadow-purple-500/20">
               <span className="text-white font-bold text-lg">D</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-zinc-900 dark:text-white">D1337 AI</span>
-              <span className="text-xs text-zinc-500 dark:text-zinc-400">Specialized AI Agents</span>
+              <span className="text-xl font-bold text-zinc-900 dark:text-white">D1337 Agent</span>
+              <span className="text-xs text-zinc-500 dark:text-zinc-400">Security AI</span>
             </div>
           </Link>
         </div>
         
         <nav className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-4 text-sm">
-            <span className="px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
-              LobeAgent
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 font-medium">
-              D1337-ZeroDay
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium">
-              D1337-Flash
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium">
-              D1337-Arsenal
-            </span>
+            <Link 
+              href="https://d1337.ai" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              About
+            </Link>
+            <Link 
+              href="https://console.d1337.ai" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              Console
+            </Link>
+            <Link 
+              href="https://d1337.ai/docs" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              Docs
+            </Link>
           </div>
         </nav>
 
         <div className="flex items-center gap-3">
           <Link
-            href="https://d1337.ai"
+            href="https://console.d1337.ai"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            className="px-4 py-2 bg-gradient-to-r from-red-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
           >
-            Learn More
+            Get Started
           </Link>
         </div>
       </div>
